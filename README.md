@@ -53,3 +53,62 @@ document.getElementById('root'));
 ```
 
 The goal for Hash Router is to keep our user interface in sync with what ther URL is. Meaning, that will display specific components on what the URL in our browser is.
+
+### Route
+
+Route is the component we will use from `react-router-dom` to determine a specific route for what component will be displayed based on the URL.
+
+We first need to import it into our file to use.
+
+```js
+import {Route} from 'react-router-dom';
+```
+
+> Make sure to use object destructering!
+
+We can now use `Route` inside of our JSX and give it specific props to determine what component is displayed based off of the URL path.
+
+```js
+<Route />
+```
+
+#### Component
+
+The `component` prop is the prop we can add to determine what component is displayed.
+
+```js
+<Route component={Home} />
+```
+
+Above we are rendering a the Home component for this route. Now we just need to determine what the URL path or route will be to display this component.
+
+#### Path
+
+The `path` prop will determine what the URL path should be to display the component.
+
+```js
+<Route path='/home' component={Home} />
+```
+
+Above, we have determined that if the URL ends with '/home' then the Home component will be displayed.
+
+#### Exact
+
+Another prop that we can add to our Route is `exact`. This prop will tell the route that the URL needs to match up exactly with the path we defined on our Route.
+
+```js
+<Route exact path='/home' component={Home} />
+```
+
+Above, we have declared the URL needs to end exactly with '/home'. If we have anything following or before the '/home' then the component will not be displayed.
+
+This is extremely important to include if we want our base route to be displayed correctly.  We can determine what our base route is by creating a route for '/'.
+
+```js
+// bad
+<Route path='/' component={Home} />
+
+// good
+<Route exact path='/' component={Home} />
+```
+
