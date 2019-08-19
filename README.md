@@ -112,3 +112,88 @@ This is extremely important to include if we want our base route to be displayed
 <Route exact path='/' component={Home} />
 ```
 
+### Switch
+
+Switch is another component that we can use from react router dom library to render only the first route that matches the URL.
+
+If we had multiple routes like so
+
+```js
+<Route exact path='/' component={Home} />
+<Route path='/about' component={About} />
+<Route path='/about/contact' component={Contact} />
+```
+
+If we went to '/about/contact' we would still see the component that is being rendered at '/about' because the URL still matches. We could fix this including a bunch of `exact` props, or we could use `Switch`.
+
+We can use `Switch` by wrapping all of our `Route` components inside of it. We need to make sure we also import Switch into our file
+
+```js
+import {Route, Switch} from 'react-router-dom';
+```
+
+> Remember to use the object destructering!
+
+Now once we have it imported, we can use it
+
+```js
+<Switch>
+    <Route exact path='/' component={Home} />
+    <Route path='/about' component={About} />
+    <Route path='/about/contact' component={Contact} />
+</Switch>
+```
+
+We need to make sure that our Routes are in oreder inside of our Switch, since it looks for the first route that matches the URL.
+
+### Link
+
+We can navigate to different routes inside of our application by using the `Link` component that comes from react-router-dom.
+
+We first need to import the `Link` into our file
+
+```js
+import {Route, Switch, Link} from 'react-router-dom';
+```
+
+Then we will wrap what ever we want to click on to take us to the route.
+
+```js
+<Link><p>Home</p></Link>
+```
+
+#### To
+
+The `Link` component has a required prop called `to`. This is how we will tell what route the link should take us to.
+
+```js
+<Link to='/'><p>Home</p></Link>
+```
+
+Above we are now telling this `Link` tag to take us to the base route, which will render the Home component.
+
+### Params
+
+#### Params
+
+We can set `params` inside of our path by prefixiing the part of the path with a colon. This will allow us to pass data to our path.
+
+```js
+<Route path='/users/:id' component={User} />
+```
+
+Above we are saying that whatever is passed to the '/:id' will be in our URL. We can link to it like so
+
+```js
+<Link to='/users/5'><p>User Profile</p></Link>
+```
+
+Above, we are passing the number 5 to the URL. We can access that data that is being sent through the URL from the `props.match.params` object.
+
+```js
+const {id} = props.match.params;
+```
+
+or if we console logged `props`, the object would look like the following
+
+![props object](images/props)
