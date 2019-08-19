@@ -8,6 +8,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
+import Profile from './components/Profile';
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
           <Route exact path='/' component={Home} />
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />
+          <Route path='/profile/:user_id' component={Profile} />
         </Switch>    
       </div>
     )

@@ -31,6 +31,10 @@ const Navbar = () => (
         <Link to="/contact" style={linkStyle}>
             <span>Contact</span>        
         </Link>
+        {/* this will link to the profile for user with id of 1 */}
+        <Link to="/profile/1" style={linkStyle}>
+            <span>Profile</span>        
+        </Link>
     </nav>
 )
 

@@ -196,4 +196,4 @@ const {id} = props.match.params;
 
 or if we console logged `props`, the object would look like the following
 
-![props object](images/props)
+![props object](images/props.png)
