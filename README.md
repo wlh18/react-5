@@ -6,7 +6,7 @@ Traditionally, when we wanted to create a website that uses multiple pages, we w
 
 A great example of this is the New York Times webpage that can be found [here](https://www.nytimes.com/).
 
-In modern day web development using libraries and frameworks such as React, only uses a single html file and allow us to create a single page application and prevents us from having to request new html files to display every time we want to route to another page.
+In modern day web development, libraries and frameworks such as React only uses a single html file and allow us to create a single page application and prevents us from having to request new html files to display every time we want to route to another page.
 
 So how do we create a single page application that allows us to have multiple pages?
 
@@ -64,12 +64,42 @@ We first need to import it into our file to use.
 import {Route} from 'react-router-dom';
 ```
 
-> Make sure to use object destructering!
+> Make sure to use object destructuring!
 
 We can now use `Route` inside of our JSX and give it specific props to determine what component is displayed based off of the URL path.
 
 ```js
 <Route />
+```
+
+#### Path
+
+The `path` prop will determine what the URL path should be to display the component.
+
+```js
+<Route path='/home' />
+```
+
+Above, we have determined that if the URL ends with '/home' then the Home component will be displayed.
+
+#### Exact
+
+Another prop that we can add to our Route is `exact`. This prop will tell the route that the URL needs to match up exactly with the path we defined on our Route.
+
+```js
+<Route exact path='/home' />
+```
+
+Above, we have declared the URL needs to end exactly with '/home'. If we have anything following or before the '/home' then the component will not be displayed.
+
+This is extremely important to include if we want our base route to be displayed correctly.  We can determine what our base route is by creating a route for '/'.
+
+```js
+// bad
+<Route path='/' />
+
+// good
+<Route exact path='/' />
 ```
 
 #### Component
@@ -80,37 +110,7 @@ The `component` prop is the prop we can add to determine what component is displ
 <Route component={Home} />
 ```
 
-Above we are rendering a the Home component for this route. Now we just need to determine what the URL path or route will be to display this component.
-
-#### Path
-
-The `path` prop will determine what the URL path should be to display the component.
-
-```js
-<Route path='/home' component={Home} />
-```
-
-Above, we have determined that if the URL ends with '/home' then the Home component will be displayed.
-
-#### Exact
-
-Another prop that we can add to our Route is `exact`. This prop will tell the route that the URL needs to match up exactly with the path we defined on our Route.
-
-```js
-<Route exact path='/home' component={Home} />
-```
-
-Above, we have declared the URL needs to end exactly with '/home'. If we have anything following or before the '/home' then the component will not be displayed.
-
-This is extremely important to include if we want our base route to be displayed correctly.  We can determine what our base route is by creating a route for '/'.
-
-```js
-// bad
-<Route path='/' component={Home} />
-
-// good
-<Route exact path='/' component={Home} />
-```
+Above we are rendering a the Home component for this route. Make sure to include curly braces and the component name.
 
 ### Switch
 
@@ -132,7 +132,7 @@ We can use `Switch` by wrapping all of our `Route` components inside of it. We n
 import {Route, Switch} from 'react-router-dom';
 ```
 
-> Remember to use the object destructering!
+> Remember to use the object destructuring!
 
 Now once we have it imported, we can use it
 
@@ -144,7 +144,7 @@ Now once we have it imported, we can use it
 </Switch>
 ```
 
-We need to make sure that our Routes are in oreder inside of our Switch, since it looks for the first route that matches the URL.
+We need to make sure that our Routes are in order inside of our Switch, since it looks for the first route that matches the URL.
 
 ### Link
 
@@ -156,7 +156,7 @@ We first need to import the `Link` into our file
 import {Route, Switch, Link} from 'react-router-dom';
 ```
 
-Then we will wrap what ever we want to click on to take us to the route.
+Then we will wrap whatever we want to click on to take us to the route.
 
 ```js
 <Link><p>Home</p></Link>
@@ -174,9 +174,7 @@ Above we are now telling this `Link` tag to take us to the base route, which wil
 
 ### Params
 
-#### Params
-
-We can set `params` inside of our path by prefixiing the part of the path with a colon. This will allow us to pass data to our path.
+We can set `params` inside of our path by prefixing the part of the path with a colon. This will allow us to pass data to our path.
 
 ```js
 <Route path='/users/:id' component={User} />
