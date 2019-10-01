@@ -6,7 +6,7 @@ Traditionally, when we wanted to create a website that uses multiple pages, we w
 
 A great example of this is the New York Times webpage that can be found [here](https://www.nytimes.com/).
 
-In modern day web development, libraries and frameworks such as React only uses a single html file and allow us to create a single page application and prevents us from having to request new html files to display every time we want to route to another page.
+In modern day web development, libraries and frameworks such as React only use a single html file and allow us to create a single page application and prevents us from having to request new html files to display every time we want to route to another page.
 
 So how do we create a single page application that allows us to have multiple pages?
 
