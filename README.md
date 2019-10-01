@@ -22,7 +22,7 @@ The library that we will be using to implement a routing system into our React a
 $ npm install react-router-dom
 ```
 
-### Hash Router
+### HashRouter
 
 We will be using a specific router from react router called `HashRouter`.
 
