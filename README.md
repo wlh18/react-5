@@ -19,7 +19,7 @@ This will allow us to create a multi page application effect, with the lightning
 The library that we will be using to implement a routing system into our React application is called `react-router-dom`. Go ahead and install it into your project by running the terminal command
 
 ```bash
-$ npm install --save react-router-dom
+$ npm install react-router-dom
 ```
 
 ### Hash Router
