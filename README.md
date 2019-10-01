@@ -24,7 +24,7 @@ $ npm install react-router-dom
 
 ### Hash Router
 
-We will be using a specific router from react router called `Hash Router`.
+We will be using a specific router from react router called `HashRouter`.
 
 Now that we have `react-router-dom` installed in our project, let's go ahead and setup the router. In `index.js` we will import HashRouter.
 
