@@ -1,9 +1,5 @@
 # React Five
 
-## Lecture Slides
-
-https://slides.com/mattbodily/deck-27ce0d
-
 In this lecture we cover React Router and how to implement a routing system into our React applications.
 
 Traditionally, when we wanted to create a website that uses multiple pages, we would need to make a request to a server to send back a specific html file to show in the browser. Everytime we would make a request it would cause our web page to reload and this can sometimes be very slow.
@@ -17,6 +13,10 @@ So how do we create a single page application that allows us to have multiple pa
 In React, we can use a library called `React Router Dom` that will handle what is being displayed to the screen based on the URL.
 
 This will allow us to create a multi page application effect, with the lightning fast speed of a single page application.
+
+## Lecture Slides
+
+https://slides.com/mattbodily/deck-27ce0d
 
 ## React Router
 
