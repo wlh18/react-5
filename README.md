@@ -1,5 +1,9 @@
 # React Five
 
+## Lecture Slides
+
+https://slides.com/mattbodily/deck-27ce0d
+
 In this lecture we cover React Router and how to implement a routing system into our React applications.
 
 Traditionally, when we wanted to create a website that uses multiple pages, we would need to make a request to a server to send back a specific html file to show in the browser. Everytime we would make a request it would cause our web page to reload and this can sometimes be very slow.
