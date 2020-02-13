@@ -240,6 +240,7 @@ or if we console logged `props`, the object would look like the following
 
 * https://medium.com/@NeotericEU/single-page-application-vs-multiple-page-application-2591588efe58 - Article that covers the pros and cons of using a Single Page Application versus a Multi Page Application.
 
+* https://redux.js.org/advanced/usage-with-react-router/ - Redux docs that cover usage of Redux with React Router.
 ## Videos
 
 * https://www.youtube.com/watch?v=Law7wfdg_ls - Solid tutorial video demonstrating how to implement React Router with BrowserRouter instead of HashRouter (very similar, and BrowserRouter would be more likely to be used in a production app)
