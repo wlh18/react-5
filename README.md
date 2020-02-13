@@ -16,7 +16,7 @@ This will allow us to create a multi page application effect, with the lightning
 
 ## Lecture Slides
 
-https://slides.com/mattbodily/deck-27ce0d
+https://slides.com/matias_perez/react-five#/
 
 ## React Router
 
