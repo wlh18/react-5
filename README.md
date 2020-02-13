@@ -1,4 +1,35 @@
-# React Five
+## Lecture Slides
+
+https://slides.com/matias_perez/react-five#/
+
+# Student Learning Objectives
+
+### Route
+
+* Student can set up a Route to view a single component.
+* Student can use path in a Route.
+* Student can load a component when the path is matched.
+* Student can use the word exact to prevent two Routes from loading their components at once.
+* Student can set up a Route path using params.
+* Student can access URL params through the props object.
+* Student can nest Routes.
+
+### Link
+
+* Student can set up Link components to direct to matching Routes.
+* Student can set up a Link component to direct to a Route with params in the path.
+
+### Switch
+
+* Student can set up a Switch component.
+* Student can correctly order Routes in a Switch component to prevent one single Route from loading for two similar paths.
+
+### Functional Components
+
+* Student can use functional components
+* Student can describe the difference between class based and functional components
+
+# React 5 Lecture Notes
 
 In this lecture we cover React Router and how to implement a routing system into our React applications.
 
@@ -14,9 +45,6 @@ In React, we can use a library called `React Router Dom` that will handle what i
 
 This will allow us to create a multi page application effect, with the lightning fast speed of a single page application.
 
-## Lecture Slides
-
-https://slides.com/matias_perez/react-five#/
 
 ## React Router
 
@@ -199,3 +227,21 @@ const {id} = props.match.params;
 or if we console logged `props`, the object would look like the following
 
 ![props object](images/props.png)
+
+# Additional Resources
+
+## Docs
+
+* https://reacttraining.com/react-router/web/guides/quick-start - The quickstart docs for implementing React Router on a React web app. 
+
+## Articles
+
+* https://johnpapa.net/pageinspa/ - Article that provides a high level overview of what a Single Page Application actually is. 
+
+* https://medium.com/@NeotericEU/single-page-application-vs-multiple-page-application-2591588efe58 - Article that covers the pros and cons of using a Single Page Application versus a Multi Page Application.
+
+## Videos
+
+* https://www.youtube.com/watch?v=Law7wfdg_ls - Solid tutorial video demonstrating how to implement React Router with BrowserRouter instead of HashRouter (very similar, and BrowserRouter would be more likely to be used in a production app)
+
+* https://www.youtube.com/watch?v=XRfD8xIOroA - Another solid tutorial video demonstrating how to implement React Router with BrowserRouter instead of HashRouter (very similar, and BrowserRouter would be more likely to be used in a production app)
