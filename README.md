@@ -1,8 +1,12 @@
-## Lecture Slides
+# React 5
 
-https://slides.com/matias_perez/react-five#/
+Lecture Slides: https://slides.com/dmweb/react-five
 
-# Student Learning Objectives
+Mini Project: https://github.com/DevMountain/react-4-mini
+
+Afternoon Project: https://github.com/DevMountain/react-4-afternoon
+
+## Student Learning Objectives
 
 ### Route
 
